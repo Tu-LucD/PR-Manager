@@ -10,10 +10,10 @@ import androidx.room.Query
 @Dao
 interface ExerciseDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(item: ExerciseItems)
+    fun insert(item: ExerciseItems)
 
     @Delete
-    suspend fun delete(item: ExerciseItems)
+    fun delete(item: ExerciseItems)
 
     @Query("SELECT * FROM exercise_items")
     fun getAllExerciseItems(): LiveData<List<ExerciseItems>>

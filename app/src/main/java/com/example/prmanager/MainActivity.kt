@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), ExerciseRVAdapter.ExerciseItemClickInt
         }
     }
 
-    fun openDialog(){
+    private fun openDialog(){
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.exercise_add_dialog)
         val cancelBtn = dialog.findViewById<Button>(R.id.idBtnCancel)
